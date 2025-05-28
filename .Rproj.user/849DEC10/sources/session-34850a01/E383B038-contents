@@ -1,0 +1,19 @@
+# Metodologia
+
+Este estudo tem como objetivo monitorar o cumprimento das metas de redução de mortes no trânsito estabelecidas pelo Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), com base nos dados atualizados para o ano de 2023. A análise foi realizada sobre os municípios brasileiros que apresentaram registros consistentes de óbitos no trânsito no período base.
+
+A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, para assegurar a robustez da análise, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.
+
+A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023.
+
+Em seguida, os dados agregados foram integrados à base de metas do estudo original (realizado entre 2020 e 2021). A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas da seguinte forma para cada município:
+
+$$
+\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média de mortes (2018–2020)}}{\text{Média de mortes (2018–2020)}}
+$$
+
+$$
+\text{Percentual da meta atingida} = \left( \frac{\text{Redução}}{\text{Meta estabelecida}} \right) \times 100
+$$
+
+A análise foi realizada utilizando a linguagem R, e os resultados foram sistematizados em um dashboard desenvolvido com o pacote `Shiny`. A ferramenta permite a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas.
