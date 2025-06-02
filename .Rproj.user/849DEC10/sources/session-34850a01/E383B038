@@ -3,7 +3,7 @@
     "path": "~/UFPR/ONSV/METAS MUNICÍPIOS/cumprimento-metas/summary.qmd",
     "project_path": "summary.qmd",
     "type": "quarto_markdown",
-    "hash": "2368157411",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1748445036728.0,
@@ -17,8 +17,8 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "2:0",
-        "cursorPosition": "19,0",
-        "scrollLine": "7"
+        "cursorPosition": "17,0",
+        "scrollLine": "5"
     },
     "folds": "",
     "lastKnownWriteTime": 1748445055,
