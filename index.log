@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.28)  2 JUN 2025 10:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.28)  2 JUN 2025 11:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,24 +900,26 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 
 [10]
 
+[11]
+
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.498 \end{CSLReferences}
+l.510 \end{CSLReferences}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
  
 Here is how much of TeX's memory you used:
- 21702 strings out of 472247
- 421506 string characters out of 5527980
- 1097901 words of memory out of 5000000
- 47982 multiletter control sequences out of 15000+600000
+ 21703 strings out of 472247
+ 421512 string characters out of 5527980
+ 1098901 words of memory out of 5000000
+ 47983 multiletter control sequences out of 15000+600000
  633272 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,7n,114p,10900b,388s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on index.pdf (10 pages).
+Output written on index.pdf (11 pages).
