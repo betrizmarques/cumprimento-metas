@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -202,8 +222,8 @@ window.Quarto = {
 
 
 <p>A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, para assegurar a robustez da análise, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.</p>
-<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023.</p>
-<p>Depois, as bases de frota e número habitantes da população de cada município foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
+<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência <span class="citation" data-cites="onsv2024base">(<a href="#ref-onsv2024base" role="doc-biblioref">ONSV, 2024</a>)</span>. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023.</p>
+<p>Depois, as bases de frota <span class="citation" data-cites="senatran2024frota">(<a href="#ref-senatran2024frota" role="doc-biblioref">BRASIL, 2024</a>)</span> e número habitantes da população de cada município <span class="citation" data-cites="ibge2023populacao">(<a href="#ref-ibge2023populacao" role="doc-biblioref">INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE), 2023</a>)</span> foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
 <p>Em seguida, os dados agregados foram integrados à base de metas do estudo original (realizado entre 2020 e 2021). A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas da seguinte forma para cada município:</p>
 <p>Os cálculos gerais do dashboard (para cada estado e para o Brasil), foram calculados utilizando dados de todos os municípios, incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS. <span class="math display">\[
 \text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média de mortes (2018–2020)}}{\text{Média de mortes (2018–2020)}}
@@ -214,6 +234,17 @@ window.Quarto = {
 <p>A análise foi realizada utilizando a linguagem R, e os resultados foram sistematizados em um dashboard desenvolvido com o pacote <code>Shiny</code>. A ferramenta permite a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
+<div id="ref-senatran2024frota" class="csl-entry" role="listitem">
+BRASIL. <strong>Frota de veículos 2024</strong>. Brasília, DFMinistério dos Transportes. Secretaria Nacional de Trânsito (Senatran), 2024. Disponível em: &lt;<a href="https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024">https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024</a>&gt;
+</div>
+<div id="ref-ibge2023populacao" class="csl-entry" role="listitem">
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). <strong>Relação da população dos municípios para publicação no TCU em 2023</strong>. Rio de JaneiroIBGE, 2023. Disponível em: &lt;<a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html">https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html</a>&gt;
+</div>
+<div id="ref-onsv2024base" class="csl-entry" role="listitem">
+ONSV. <strong>Base de dados roadtrafficdeaths</strong>. Observatório Nacional de Segurança Viária, 2024. Disponível em: &lt;<a href="https://github.com/pabsantos/roadtrafficdeaths">https://github.com/pabsantos/roadtrafficdeaths</a>&gt;
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
