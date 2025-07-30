@@ -18,15 +18,13 @@ book:
     - references.qmd
 
 bibliography: references.bib
-
+csl: associacao-brasileira-de-normas-tecnicas.csl
 editor: visual
 
 format:
   html:
-    csl: associacao-brasileira-de-normas-tecnicas.csl
     theme: cosmo
   pdf:
-    csl: associacao-brasileira-de-normas-tecnicas.csl
     documentclass: scrreprt
 website:
   repo-url: https://github.com/betrizmarques/relatorio-cumprimento-metas.git
