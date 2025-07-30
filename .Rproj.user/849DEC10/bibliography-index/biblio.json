@@ -1,32 +1,86 @@
 {
     "sources": [
         {
-            "DOI": "10.1093/comjnl/27.2.97",
-            "ISSN": "0010-4620",
-            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
+            "URL": "https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios",
             "author": [
                 {
-                    "family": "Knuth",
-                    "given": "Donald E."
+                    "dropping-particle": "UFPR;",
+                    "family": "ONSV"
                 }
             ],
-            "container-title": "Comput. J.",
-            "id": "knuth84",
-            "issue": "2",
+            "id": "ufpr2021plano",
             "issued": {
                 "date-parts": [
                     [
-                        1984,
-                        5
+                        2021
                     ]
                 ]
             },
-            "page": "97-111",
-            "publisher": "Oxford University Press, Inc.",
-            "publisher-place": "USA",
-            "title": "Literate programming",
-            "type": "article-journal",
-            "volume": "27"
+            "page": "53",
+            "publisher": "Universidade Federal do Paraná; Observatório Nacional de Segurança Viária",
+            "publisher-place": "Curitiba",
+            "title": "O plano nacional de redução mortes e lesões no trânsito: O papel dos municípios",
+            "title-short": "O plano nacional de redução mortes e lesões no trânsito",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/pabsantos/roadtrafficdeaths",
+            "author": [
+                {
+                    "literal": "ONSV"
+                }
+            ],
+            "id": "onsv2024base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "publisher": "Observatório Nacional de Segurança Viária",
+            "title": "Base de dados roadtrafficdeaths",
+            "type": ""
+        },
+        {
+            "URL": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024",
+            "author": [
+                {
+                    "literal": "BRASIL"
+                }
+            ],
+            "id": "senatran2024frota",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "publisher": "Ministério dos Transportes. Secretaria Nacional de Trânsito (Senatran)",
+            "publisher-place": "Brasília, DF",
+            "title": "Frota de veículos 2024",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html",
+            "author": [
+                {
+                    "literal": "INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE)"
+                }
+            ],
+            "id": "ibge2023populacao",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "publisher": "IBGE",
+            "publisher-place": "Rio de Janeiro",
+            "title": "Relação da população dos municípios para publicação no TCU em 2023",
+            "type": ""
         }
     ],
     "project_biblios": [

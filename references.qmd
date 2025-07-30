@@ -1,11 +1,1 @@
 # Referências {.unnumbered}
-
-::: {#refs}
-UFPR; ONSV (2021). O Plano Nacional de Redução Mortes e Lesões no Trânsito: O Papel dos Municípios. Universidade Federal do Paraná e Observatório Nacional de Segurança Viária. 53 p. Disponível em: <https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios>.
-
-ONSV (2024). Base de dados roadtrafficdeaths. Observatório Nacional de Segurança Viária. Disponível em: <https://github.com/pabsantos/roadtrafficdeaths>.
-
-BRASIL. Ministério dos Transportes. Secretaria Nacional de Trânsito (Senatran). Frota de veículos 2024. Disponível em: <https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024>.
-
-IBGE (2023). Relação da população dos municípios para publicação no TCU em 2023. Disponível em: <https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html>.
-:::
