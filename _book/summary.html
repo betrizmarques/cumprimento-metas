@@ -168,7 +168,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referências</span></a>
   </div>
 </li>
     </ul>
@@ -201,11 +201,11 @@ window.Quarto = {
 </header>
 
 
-<p>Este estudo tem como objetivo monitorar o cumprimento das metas de redução de mortes no trânsito estabelecidas pelo Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), com base nos dados atualizados para o ano de 2023. A análise foi realizada sobre os municípios brasileiros que apresentaram registros consistentes de óbitos no trânsito no período base.</p>
 <p>A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, para assegurar a robustez da análise, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.</p>
 <p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023.</p>
+<p>Depois, as bases de frota e número habitantes da população de cada município foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
 <p>Em seguida, os dados agregados foram integrados à base de metas do estudo original (realizado entre 2020 e 2021). A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas da seguinte forma para cada município:</p>
-<p><span class="math display">\[
+<p>Os cálculos gerais do dashboard (para cada estado e para o Brasil), foram calculados utilizando dados de todos os municípios, incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS. <span class="math display">\[
 \text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média de mortes (2018–2020)}}{\text{Média de mortes (2018–2020)}}
 \]</span></p>
 <p><span class="math display">\[
