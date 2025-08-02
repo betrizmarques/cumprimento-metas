@@ -20,7 +20,6 @@ book:
 
 bibliography: references.bib
 csl: apa.csl
-editor: visual
 
 format:
   html:
