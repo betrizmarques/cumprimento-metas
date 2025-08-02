@@ -1,19 +1,105 @@
 # Metodologia
 
-A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, para assegurar a robustez da análise, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.
+A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, nas análises de comparação dos dois períodos, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.
 
-A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência [@onsv2024base]. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023.
+Quanto ao número de mortes por UF e do Brasil como um todo, todos os municípios foram considerados (incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS), para criar um panorama geral de cada Unidade Federação e visualizar a situação do país em relação à segurança viária.
+
+## Pré-processamento dos dados
+
+A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência [@onsv2024base]. Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:
+
+| uf  | nome_do_municipio | numero_de_mortes_2023 |
+|:---:|:-----------------:|:---------------------:|
+| AC  |     Brasiléia     |           4           |
+| AC  |      Bujari       |           3           |
+| AC  |     Capixaba      |           3           |
+| AC  |  Cruzeiro do Sul  |          13           |
+| AC  |  Epitaciolândia   |           2           |
 
 Depois, as bases de frota [@senatran2024frota] e número habitantes da população de cada município [@ibge2023populacao] foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.
 
-Em seguida, os dados agregados foram integrados à base de metas do estudo original (realizado entre 2020 e 2021). A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas da seguinte forma para cada município:
+Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original [@ufpr2021plano], onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
 
-Os cálculos gerais do dashboard (para cada estado e para o Brasil), foram calculados utilizando dados de todos os municípios, incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS. $$
-\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média de mortes (2018–2020)}}{\text{Média de mortes (2018–2020)}}
+| uf | municipio | media_mortes | prioridade | meta | variacao | var_perc |
+|:-------:|:----------:|:------------:|:---------:|:---------:|:---------:|:----------:|
+| Acre | Acrelândia | 2.6666667 | 23 | 2.32159208 | -0.34507458 | -0.12940297 |
+| Acre | Brasiléia | 4.3333333 | 11 | 2.09034854 | -2.24298479 | -0.51761188 |
+| Acre | Bujari | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
+| Acre | Capixaba | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
+| Acre | Cruzeiro do Sul | 13.3333333 | 20 | 9.10930957 | -4.22402377 | -0.31680178 |
+
+A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas para cada município:
+
+$$
+\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
 $$
 
 $$
 \text{Percentual da meta atingida} = \left( \frac{\text{Redução}}{\text{Meta estabelecida}} \right) \times 100
 $$
 
-A análise foi realizada utilizando a linguagem R, e os resultados foram sistematizados em um dashboard desenvolvido com o pacote `Shiny`. A ferramenta permite a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas.
+Estes dois reultados foram duas novas variáveis criadas e agregadas à base final, o pré-processamento dos dados foi inteiramente realizado utilizando a linguagem R.
+
+## Dashboard
+
+Depois do pré-processamento dos dados, os resultados foram sistematizados em um dashboard desenvolvido com os pacotes `Shiny` e `Bs4Dash`, que pertencem à linguagem R. Essas ferramentas permitem a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas. Para visualizar o dashboard, deve-se clicar no link a seguir:
+
+[Dashboard: Cumprimento das metas](https://beatrizmarques.shinyapps.io/cumprimento_metas/){.btn .btn-danger .btn-lg}
+
+A interface é organizada por **unidades da federação**, e cada aba apresenta:
+
+-   **Gráfico de dispersão**: mostra a variação proporcional do número de mortes em 2023 em relação à média de 2018–2020, destacando os municípios que atingiram ou não suas metas;
+
+-   **Gráfico de barras**: exibe o percentual de municípios que cumpriram as metas em cada estado e capital;
+
+-   ️ **Tabela interativa**: apresenta, para cada município, informações como população, frota, número de mortes em 2023, meta individualizada e se foi atingida;
+
+-   **Mapa interativo:** mostra a situação de cada estado quanto à segurança viária.
+
+O dashboard foi desenvolvido para ser uma **ferramenta de visualização do cumprimento das metas**, possibilitando a identificação de áreas críticas e de boas práticas locais.
+
+## Abas
+
+O dashboard foi estruturado com um menu lateral que organiza o conteúdo por **unidades da federação**, facilitando a navegação e a análise regionalizada do cumprimento das metas.
+
+Cada aba representa um estado brasileiro (ou o consolidado nacional “Brasil”) e, ao ser selecionada, exibe um conjunto de visualizações e informações específicas para os municípios daquela unidade federativa. Essa estrutura permite ao usuário realizar consultas direcionadas, comparações regionais e identificar padrões de desempenho na redução de mortes no trânsito.
+
+## Conteúdo
+
+Para cada aba (UF), o conteúdo apresentado inclui:
+
+-   Média do número de mortes no trânsito (2018-2020);
+
+-   Número de mortes no trânsito (2023);
+
+-   Percentual de municípios que já atingiram a meta;
+
+-   Total de municípios contabilizados no cálculo (não outliers);
+
+-   Qual era a meta estabelecida para o total;
+
+-   Percentual de redução ou aumento no número de mortes;
+
+-   Gráfico de barras por estado;
+
+-   Gráfico de barras por capital;
+
+-   Gráfico de dispersão: meta estabelecida x meta atingida;
+
+-   Tabela interativa.
+
+### Gráfico de Barras
+
+Os gráficos de barras mostram o desempenho de cada estado e capital na redução das mortes no trânsito. Por serem interativos, é possível passar o cursor sobre as barras para visualizar o desempenho detalhado de cada unidade da federação. As barras à esquerda de 0% indicam redução no número de mortes, enquanto as à direita indicam aumento em 2023. Em cada aba, as barras do estado e da respectiva capital ficam em destaque para facilitar a visualização.
+
+### Gráfico de Dispersão
+
+O gráfico de dispersão representa o percentual de alcance da meta em relação ao valor estabelecido. O eixo X exibe a meta de redução, sempre expressa em valores negativos. O eixo Y indica o percentual já atingido por cada município: valores negativos correspondem a um desempenho abaixo do esperado (contrário à meta), enquanto valores positivos indicam progresso. Cada ponto representa um município, com a cor vermelha indicando aumento no número de mortes e a verde, redução. Ao passar o cursor sobre os pontos, são exibidas informações detalhadas: nome do município, estado, meta de redução, percentual de redução, média de mortes (2018–2020) e número de mortes em 2023.
+
+### Tabela
+
+A tabela apresenta a lista de todos os municípios que tinham uma meta estabelecida. Nela, é possível verificar todas as informações de cada município, incluindo o total da frota e o número de habitantes em 2023. Os municípios estão ordenados por prioridade (1-27) e é possível pesquisar um município específico através da barra de pesquisa no canto direito superior da tabela. Para facilitar a análise, há também um filtro que permite visualizar apenas os municípios que já atingiram a meta ou os que não atingiram.
+
+### Mapa Interativo 
+
+O mapa interativo está presente apenas na aba do Brasil. Ele exibe o mapa do Brasil dividido por estado, nos quais os tons mais escuros de vermelho representam uma situação alarmante enquanto os tons mais claros retratam uma uma situação de menor gravidade. Ao clicar na UF com o mouse, surgem as informações sobre aquela determinada região. Na parte esquerda inferior do mapa, é possível alterar a variável que se deseja visualizar no mapa, elas incluem: número de morres em 2023, média do número de mortes de 2018 à 2020, variação, o quanto da meta já foi atingida e qual era a meta estabelecida.

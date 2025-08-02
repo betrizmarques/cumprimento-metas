@@ -13,18 +13,18 @@ p {
 
 <p>
 
-O Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), criado pela Lei Federal nº 13.614/2018, tem como objetivo estabelecer metas de redução da mortalidade no trânsito para os estados e para o país entre 2019 e 2028. Em 2021, o plano foi revisado, prorrogando o prazo das metas até 2030 e reformulando seus pilares de atuação. As metas de redução foram definidas para os municípios brasileiros através das técnicas de *clusterização* e *benchmarking*. O objetivo, agora, é observar o desempenho de cada município até 2023, atráves da visualização de dados. Para isso, foi criado um Dashboard que contém todas as informações necessárias para essa análise. O DashBoard para visualização do desempenho dos municípios está disponível neste link: [Dashboard](https://beatrizmarques.shinyapps.io/cumprimento_metas/).
+O Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), criado pela Lei Federal nº 13.614/2018, tem como objetivo estabelecer metas de redução da mortalidade no trânsito para os estados e para o país entre 2019 e 2028. Em 2021, o plano foi revisado, prorrogando o prazo das metas até 2030 e reformulando seus pilares de atuação. As metas de redução foram definidas para os municípios brasileiros através das técnicas de *clusterização* e *benchmarking*. O objetivo, agora, é observar o desempenho de cada município até 2023, atráves da visualização de dados. Para isso, foi criado um Dashboard que contém todas as informações necessárias para esse monitoramento. O DashBoard para visualização do desempenho dos municípios está disponível neste link: [Dashboard](https://beatrizmarques.shinyapps.io/cumprimento_metas/).
 
 # Highlights {.unnumbered}
 
 ------------------------------------------------------------------------
 
--   35% dos municípios brasileiros já atingiram a meta estabelecida;
+-   35,11% dos municípios brasileiros já atingiram a meta estabelecida;
 -   O estado do Acre obteve o melhor desempenho, com uma redução de 15% das mortes no trânsito e 50% dos seus municípios com a meta já atingida;
 -   Das 27 unidades da federação, 22 obteviveram um aumento no número de mortes no trânsito em 2023;
 -   Alguns estados apresentaram aumento nas mortes de até 26,45%, indicando um agravamento na situação de segurança viária;
 -   São Paulo foi a capital com melhor desempenho, registrando uma redução de 52% de mortes no trânsito;
--   Em 2023, o Brasil registrou 34599 mortes no trânsito, apontando um aumento de 6,66% em relação à 2020;
+-   Em 2023, o Brasil registrou 34.881 mortes no trânsito, apontando um aumento de 7,53% em relação à 2020;
 
 # Sobre o Observatório {.unnumbered}
 

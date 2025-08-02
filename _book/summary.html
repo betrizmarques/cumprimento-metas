@@ -196,8 +196,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pré-processamento-dos-dados" id="toc-pré-processamento-dos-dados" class="nav-link active" data-scroll-target="#pré-processamento-dos-dados"><span class="header-section-number">2.1</span> Pré-processamento dos dados</a></li>
+  <li><a href="#dashboard" id="toc-dashboard" class="nav-link" data-scroll-target="#dashboard"><span class="header-section-number">2.2</span> Dashboard</a></li>
+  <li><a href="#abas" id="toc-abas" class="nav-link" data-scroll-target="#abas"><span class="header-section-number">2.3</span> Abas</a></li>
+  <li><a href="#conteúdo" id="toc-conteúdo" class="nav-link" data-scroll-target="#conteúdo"><span class="header-section-number">2.4</span> Conteúdo</a>
+  <ul class="collapse">
+  <li><a href="#gráfico-de-barras" id="toc-gráfico-de-barras" class="nav-link" data-scroll-target="#gráfico-de-barras"><span class="header-section-number">2.4.1</span> Gráfico de Barras</a></li>
+  <li><a href="#gráfico-de-dispersão" id="toc-gráfico-de-dispersão" class="nav-link" data-scroll-target="#gráfico-de-dispersão"><span class="header-section-number">2.4.2</span> Gráfico de Dispersão</a></li>
+  <li><a href="#tabela" id="toc-tabela" class="nav-link" data-scroll-target="#tabela"><span class="header-section-number">2.4.3</span> Tabela</a></li>
+  <li><a href="#mapa-interativo" id="toc-mapa-interativo" class="nav-link" data-scroll-target="#mapa-interativo"><span class="header-section-number">2.4.4</span> Mapa Interativo</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -221,17 +236,175 @@ window.Quarto = {
 </header>
 
 
-<p>A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, para assegurar a robustez da análise, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.</p>
-<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência <span class="citation" data-cites="onsv2024base">(<a href="#ref-onsv2024base" role="doc-biblioref">ONSV, 2024</a>)</span>. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023.</p>
+<p>A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, nas análises de comparação dos dois períodos, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.</p>
+<p>Quanto ao número de mortes por UF e do Brasil como um todo, todos os municípios foram considerados (incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS), para criar um panorama geral de cada Unidade Federação e visualizar a situação do país em relação à segurança viária.</p>
+<section id="pré-processamento-dos-dados" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="pré-processamento-dos-dados"><span class="header-section-number">2.1</span> Pré-processamento dos dados</h2>
+<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência <span class="citation" data-cites="onsv2024base">(<a href="#ref-onsv2024base" role="doc-biblioref">ONSV, 2024</a>)</span>. Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">uf</th>
+<th style="text-align: center;">nome_do_municipio</th>
+<th style="text-align: center;">numero_de_mortes_2023</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">Brasiléia</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">Bujari</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">Capixaba</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">Cruzeiro do Sul</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">Epitaciolândia</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
 <p>Depois, as bases de frota <span class="citation" data-cites="senatran2024frota">(<a href="#ref-senatran2024frota" role="doc-biblioref">BRASIL, 2024</a>)</span> e número habitantes da população de cada município <span class="citation" data-cites="ibge2023populacao">(<a href="#ref-ibge2023populacao" role="doc-biblioref">INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE), 2023</a>)</span> foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
-<p>Em seguida, os dados agregados foram integrados à base de metas do estudo original (realizado entre 2020 e 2021). A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas da seguinte forma para cada município:</p>
-<p>Os cálculos gerais do dashboard (para cada estado e para o Brasil), foram calculados utilizando dados de todos os municípios, incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS. <span class="math display">\[
-\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média de mortes (2018–2020)}}{\text{Média de mortes (2018–2020)}}
+<p>Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original <span class="citation" data-cites="ufpr2021plano">(<a href="#ref-ufpr2021plano" role="doc-biblioref">ONSV, 2021</a>)</span>, onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">uf</th>
+<th style="text-align: center;">municipio</th>
+<th style="text-align: center;">media_mortes</th>
+<th style="text-align: center;">prioridade</th>
+<th style="text-align: center;">meta</th>
+<th style="text-align: center;">variacao</th>
+<th style="text-align: center;">var_perc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Acre</td>
+<td style="text-align: center;">Acrelândia</td>
+<td style="text-align: center;">2.6666667</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">2.32159208</td>
+<td style="text-align: center;">-0.34507458</td>
+<td style="text-align: center;">-0.12940297</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acre</td>
+<td style="text-align: center;">Brasiléia</td>
+<td style="text-align: center;">4.3333333</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">2.09034854</td>
+<td style="text-align: center;">-2.24298479</td>
+<td style="text-align: center;">-0.51761188</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Acre</td>
+<td style="text-align: center;">Bujari</td>
+<td style="text-align: center;">0.6666667</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.60196518</td>
+<td style="text-align: center;">-0.06470148</td>
+<td style="text-align: center;">-0.09705223</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acre</td>
+<td style="text-align: center;">Capixaba</td>
+<td style="text-align: center;">0.6666667</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">0.60196518</td>
+<td style="text-align: center;">-0.06470148</td>
+<td style="text-align: center;">-0.09705223</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Acre</td>
+<td style="text-align: center;">Cruzeiro do Sul</td>
+<td style="text-align: center;">13.3333333</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">9.10930957</td>
+<td style="text-align: center;">-4.22402377</td>
+<td style="text-align: center;">-0.31680178</td>
+</tr>
+</tbody>
+</table>
+<p>A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas para cada município:</p>
+<p><span class="math display">\[
+\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
 \]</span></p>
 <p><span class="math display">\[
 \text{Percentual da meta atingida} = \left( \frac{\text{Redução}}{\text{Meta estabelecida}} \right) \times 100
 \]</span></p>
-<p>A análise foi realizada utilizando a linguagem R, e os resultados foram sistematizados em um dashboard desenvolvido com o pacote <code>Shiny</code>. A ferramenta permite a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas.</p>
+<p>Estes dois reultados foram duas novas variáveis criadas e agregadas à base final, o pré-processamento dos dados foi inteiramente realizado utilizando a linguagem R.</p>
+</section>
+<section id="dashboard" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="dashboard"><span class="header-section-number">2.2</span> Dashboard</h2>
+<p>Depois do pré-processamento dos dados, os resultados foram sistematizados em um dashboard desenvolvido com os pacotes <code>Shiny</code> e <code>Bs4Dash</code>, que pertencem à linguagem R. Essas ferramentas permitem a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas. Para visualizar o dashboard, deve-se clicar no link a seguir:</p>
+<p><a href="https://beatrizmarques.shinyapps.io/cumprimento_metas/" class="btn btn-danger btn-lg">Dashboard: Cumprimento das metas</a></p>
+<p>A interface é organizada por <strong>unidades da federação</strong>, e cada aba apresenta:</p>
+<ul>
+<li><p><strong>Gráfico de dispersão</strong>: mostra a variação proporcional do número de mortes em 2023 em relação à média de 2018–2020, destacando os municípios que atingiram ou não suas metas;</p></li>
+<li><p><strong>Gráfico de barras</strong>: exibe o percentual de municípios que cumpriram as metas em cada estado e capital;</p></li>
+<li><p>️ <strong>Tabela interativa</strong>: apresenta, para cada município, informações como população, frota, número de mortes em 2023, meta individualizada e se foi atingida;</p></li>
+<li><p><strong>Mapa interativo:</strong> mostra a situação de cada estado quanto à segurança viária.</p></li>
+</ul>
+<p>O dashboard foi desenvolvido para ser uma <strong>ferramenta de visualização do cumprimento das metas</strong>, possibilitando a identificação de áreas críticas e de boas práticas locais.</p>
+</section>
+<section id="abas" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="abas"><span class="header-section-number">2.3</span> Abas</h2>
+<p>O dashboard foi estruturado com um menu lateral que organiza o conteúdo por <strong>unidades da federação</strong>, facilitando a navegação e a análise regionalizada do cumprimento das metas.</p>
+<p>Cada aba representa um estado brasileiro (ou o consolidado nacional “Brasil”) e, ao ser selecionada, exibe um conjunto de visualizações e informações específicas para os municípios daquela unidade federativa. Essa estrutura permite ao usuário realizar consultas direcionadas, comparações regionais e identificar padrões de desempenho na redução de mortes no trânsito.</p>
+</section>
+<section id="conteúdo" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="conteúdo"><span class="header-section-number">2.4</span> Conteúdo</h2>
+<p>Para cada aba (UF), o conteúdo apresentado inclui:</p>
+<ul>
+<li><p>Média do número de mortes no trânsito (2018-2020);</p></li>
+<li><p>Número de mortes no trânsito (2023);</p></li>
+<li><p>Percentual de municípios que já atingiram a meta;</p></li>
+<li><p>Total de municípios contabilizados no cálculo (não outliers);</p></li>
+<li><p>Qual era a meta estabelecida para o total;</p></li>
+<li><p>Percentual de redução ou aumento no número de mortes;</p></li>
+<li><p>Gráfico de barras por estado;</p></li>
+<li><p>Gráfico de barras por capital;</p></li>
+<li><p>Gráfico de dispersão: meta estabelecida x meta atingida;</p></li>
+<li><p>Tabela interativa.</p></li>
+</ul>
+<section id="gráfico-de-barras" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="gráfico-de-barras"><span class="header-section-number">2.4.1</span> Gráfico de Barras</h3>
+<p>Os gráficos de barras mostram o desempenho de cada estado e capital na redução das mortes no trânsito. Por serem interativos, é possível passar o cursor sobre as barras para visualizar o desempenho detalhado de cada unidade da federação. As barras à esquerda de 0% indicam redução no número de mortes, enquanto as à direita indicam aumento em 2023. Em cada aba, as barras do estado e da respectiva capital ficam em destaque para facilitar a visualização.</p>
+</section>
+<section id="gráfico-de-dispersão" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="gráfico-de-dispersão"><span class="header-section-number">2.4.2</span> Gráfico de Dispersão</h3>
+<p>O gráfico de dispersão representa o percentual de alcance da meta em relação ao valor estabelecido. O eixo X exibe a meta de redução, sempre expressa em valores negativos. O eixo Y indica o percentual já atingido por cada município: valores negativos correspondem a um desempenho abaixo do esperado (contrário à meta), enquanto valores positivos indicam progresso. Cada ponto representa um município, com a cor vermelha indicando aumento no número de mortes e a verde, redução. Ao passar o cursor sobre os pontos, são exibidas informações detalhadas: nome do município, estado, meta de redução, percentual de redução, média de mortes (2018–2020) e número de mortes em 2023.</p>
+</section>
+<section id="tabela" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="tabela"><span class="header-section-number">2.4.3</span> Tabela</h3>
+<p>A tabela apresenta a lista de todos os municípios que tinham uma meta estabelecida. Nela, é possível verificar todas as informações de cada município, incluindo o total da frota e o número de habitantes em 2023. Os municípios estão ordenados por prioridade (1-27) e é possível pesquisar um município específico através da barra de pesquisa no canto direito superior da tabela. Para facilitar a análise, há também um filtro que permite visualizar apenas os municípios que já atingiram a meta ou os que não atingiram.</p>
+</section>
+<section id="mapa-interativo" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="mapa-interativo"><span class="header-section-number">2.4.4</span> Mapa Interativo</h3>
+<p>O mapa interativo está presente apenas na aba do Brasil. Ele exibe o mapa do Brasil dividido por estado, nos quais os tons mais escuros de vermelho representam uma situação alarmante enquanto os tons mais claros retratam uma uma situação de menor gravidade. Ao clicar na UF com o mouse, surgem as informações sobre aquela determinada região. Na parte esquerda inferior do mapa, é possível alterar a variável que se deseja visualizar no mapa, elas incluem: número de morres em 2023, média do número de mortes de 2018 à 2020, variação, o quanto da meta já foi atingida e qual era a meta estabelecida.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
@@ -244,7 +417,12 @@ INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). <strong>Relação da po
 <div id="ref-onsv2024base" class="csl-entry" role="listitem">
 ONSV. <strong>Base de dados roadtrafficdeaths</strong>. Observatório Nacional de Segurança Viária, 2024. Disponível em: &lt;<a href="https://github.com/pabsantos/roadtrafficdeaths">https://github.com/pabsantos/roadtrafficdeaths</a>&gt;
 </div>
+<div id="ref-ufpr2021plano" class="csl-entry" role="listitem">
+ONSV, UFPR; <strong><a href="https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios">O plano nacional de redução mortes e lesões no trânsito: O papel dos municípios</a></strong>. Curitiba: Universidade Federal do Paraná; Observatório Nacional de Segurança Viária, 2021. p. 53
 </div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
