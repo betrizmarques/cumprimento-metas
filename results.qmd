@@ -1,4 +1,3 @@
-
 ---
 editor: 
   markdown: 
@@ -75,11 +74,35 @@ Para cada aba (UF), o conteúdo apresentado inclui:
 -   Tabela interativa.
 
 ### Gráfico de Barras
-Os gráficos de barras mostram o desempenho de cada estado e capital na redução das mortes no trânsito. Por serem interativos, é possível passar o cursor sobre as barras para visualizar o desempenho detalhado de cada unidade da federação. As barras à esquerda de 0% indicam redução no número de mortes, enquanto as à direita indicam aumento em 2023. Em cada aba, as barras do estado e da respectiva capital ficam em destaque para facilitar a visualização.
+
+Os gráficos de barras mostram o desempenho de cada estado e capital na
+redução das mortes no trânsito. Por serem interativos, é possível passar
+o cursor sobre as barras para visualizar o desempenho detalhado de cada
+unidade da federação. As barras à esquerda de 0% indicam redução no
+número de mortes, enquanto as à direita indicam aumento em 2023. Em cada
+aba, as barras do estado e da respectiva capital ficam em destaque para
+facilitar a visualização.
 
 ### Gráfico de Dispersão
-O gráfico de dispersão representa o percentual de alcance da meta em relação ao valor estabelecido. O eixo X exibe a meta de redução, sempre expressa em valores negativos. O eixo Y indica o percentual já atingido por cada município: valores negativos correspondem a um desempenho abaixo do esperado (contrário à meta), enquanto valores positivos indicam progresso. Cada ponto representa um município, com a cor vermelha indicando aumento no número de mortes e a verde, redução. Ao passar o cursor sobre os pontos, são exibidas informações detalhadas: nome do município, estado, meta de redução, percentual de redução, média de mortes (2018–2020) e número de mortes em 2023.
+
+O gráfico de dispersão representa o percentual de alcance da meta em
+relação ao valor estabelecido. O eixo X exibe a meta de redução, sempre
+expressa em valores negativos. O eixo Y indica o percentual já atingido
+por cada município: valores negativos correspondem a um desempenho
+abaixo do esperado (contrário à meta), enquanto valores positivos
+indicam progresso. Cada ponto representa um município, com a cor
+vermelha indicando aumento no número de mortes e a verde, redução. Ao
+passar o cursor sobre os pontos, são exibidas informações detalhadas:
+nome do município, estado, meta de redução, percentual de redução, média
+de mortes (2018–2020) e número de mortes em 2023.
 
 ### Tabela
-A Tabela apresenta a lista de todos os municípios que tinham uma meta estabelecida. Nela, é possível verificar todas as informações de cada município, incluindo o total da frota e o número de habitantes em 2023. Os municípios estão ordenados por prioridade (1-27) e é possível pesquisar um município específico através da barra de pesquisa no canto direito superior da tabela. Para facilitar a análise, há também um filtro que permite visualizar apenas os municípios que já atingiram a meta ou os que não atingiram.
 
+A Tabela apresenta a lista de todos os municípios que tinham uma meta
+estabelecida. Nela, é possível verificar todas as informações de cada
+município, incluindo o total da frota e o número de habitantes em 2023.
+Os municípios estão ordenados por prioridade (1-27) e é possível
+pesquisar um município específico através da barra de pesquisa no canto
+direito superior da tabela. Para facilitar a análise, há também um
+filtro que permite visualizar apenas os municípios que já atingiram a
+meta ou os que não atingiram.
