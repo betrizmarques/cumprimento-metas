@@ -21,7 +21,7 @@ Depois, as bases de frota [@senatran2024frota] e número habitantes da populaç�
 Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original [@ufpr2021plano], onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
 
 | uf | municipio | media_mortes | prioridade | meta | variacao | var_perc |
-|:------:|:----------:|:----------:|:---------:|:---------:|:---------:|:---------:|
+|:-----:|:-----------:|:----------:|:---------:|:---------:|:---------:|:---------:|
 | Acre | Acrelândia | 2.6666667 | 23 | 2.32159208 | -0.34507458 | -0.12940297 |
 | Acre | Brasiléia | 4.3333333 | 11 | 2.09034854 | -2.24298479 | -0.51761188 |
 | Acre | Bujari | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
