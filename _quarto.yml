@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _book # MOVA ESTA LINHA PARA AQUI!
+  output-dir: _book
 
 book:
   title: "Análise do Cumprimento das Metas de Redução de Mortes no Trânsito dos Municípios Brasileiros até 2023."
@@ -19,7 +19,7 @@ book:
     - references.qmd
 
 bibliography: references.bib
-csl: associacao-brasileira-de-normas-tecnicas.csl
+csl: associacao-brasileira-de-normas-tecnicas-note.csl
 editor: visual
 
 format:
