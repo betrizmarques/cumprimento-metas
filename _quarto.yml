@@ -19,7 +19,7 @@ book:
     - references.qmd
 
 bibliography: references.bib
-csl: associacao-brasileira-de-normas-tecnicas-note.csl
+csl: associacao-brasileira-de-normas-tecnicas-numerico.csl
 editor: visual
 
 format:
