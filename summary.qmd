@@ -44,7 +44,7 @@ Estes dois reultados foram duas novas variáveis criadas e agregadas à base fin
 
 Depois do pré-processamento dos dados, os resultados foram sistematizados em um dashboard desenvolvido com os pacotes `Shiny` e `Bs4Dash`, que pertencem à linguagem R. Essas ferramentas permitem a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas. Para visualizar o dashboard, deve-se clicar no link a seguir:
 
-[Dashboard: Cumprimento das metas](https://beatrizmarques.shinyapps.io/cumprimento_metas/){.btn .btn-danger .btn-lg}
+[Dashboard: Cumprimento das metas](https://beatrizmarques.shinyapps.io/cumprimento_metas/){.btn .btn-secondary .btn-sm}
 
 A interface é organizada por **unidades da federação**, e cada aba apresenta:
 
