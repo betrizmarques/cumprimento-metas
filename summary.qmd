@@ -31,7 +31,7 @@ Em seguida, as bases pré-processadas acima foram integrados à base de metas do
 A variável **var** e **var_perc** representam a variação da meta em relação à média de mortes e o percentual de variação, respectivamente:
 
 $$
-\text{Var} = {\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}
+\text{var} = {\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}
 $$
 
 $$
