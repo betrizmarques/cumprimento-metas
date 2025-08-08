@@ -21,21 +21,25 @@ Depois, as bases de frota [@senatran2024frota] e número habitantes da populaç�
 Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original [@ufpr2021plano], onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
 
 | uf | municipio | media_mortes | prioridade | meta | var | var_perc |
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Acre | Acrelândia | 2.6666667 | 23 | 2.32159208 | -0.34507458 | -0.12940297 |
 | Acre | Brasiléia | 4.3333333 | 11 | 2.09034854 | -2.24298479 | -0.51761188 |
 | Acre | Bujari | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
 | Acre | Capixaba | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
 | Acre | Cruzeiro do Sul | 13.3333333 | 20 | 9.10930957 | -4.22402377 | -0.31680178 |
 
-A variável **var** e **var_perc** representam a variação da meta em relação à média de mortes e o percentual de variação, respectivamente:
+A variável **var** e **var_perc** representam a variação da meta em relação à média de mortes e o percentual de variação, respectivamente.
+
+Variação:
 
 $$
 \text{var} = {\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}
 $$
 
+Percentual de Variação:
+
 $$
-\text{var_percent} = \frac{\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
+\mathrm{var\_perc} = \frac{\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
 $$
 
 A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas para cada município:
