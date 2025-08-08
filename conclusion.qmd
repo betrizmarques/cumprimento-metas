@@ -1,4 +1,7 @@
-# Conclusão
+---
+title: "Conclusão"
+---
+
 
 Os resultados apresentados evidenciam a complexidade e os desafios enfrentados pelos municípios brasileiros no cumprimento das metas de redução de mortes no trânsito até 2023. Apesar de iniciativas e esforços voltados à segurança viária, os dados revelam que apenas uma parcela dos municípios conseguiu atingir ou superar as metas estabelecidas, enquanto muitos ainda apresentam níveis de mortalidade superiores à média do período-base (2018–2020).
 
