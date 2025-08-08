@@ -24,8 +24,10 @@ csl: associacao-brasileira-de-normas-tecnicas-ufpr.csl
 format:
   html:
     theme: cosmo
+    reference-location: section
   pdf:
-    documentclass: scrreprt
+    documentclass: book
+    reference-location: section  
 website:
   repo-url: https://github.com/betrizmarques/relatorio-cumprimento-metas.git
   repo-actions: [edit, issue]
