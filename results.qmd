@@ -1,6 +1,10 @@
 ---
-title: "Resultados"
+editor: 
+  markdown: 
+    wrap: 72
 ---
+
+# Resultados
 
 ## Brasil
 

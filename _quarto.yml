@@ -19,7 +19,6 @@ book:
     - references.qmd
 
 bibliography: references.bib
-csl: associacao-brasileira-de-normas-tecnicas-ufpr.csl
 
 format:
   html:
