@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-5fd9db47a040b21ac2cac9a0b3b722ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -282,9 +282,9 @@ window.Quarto = {
 <p>Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original <span class="citation" data-cites="ufpr2021plano"><a href="#ref-ufpr2021plano" role="doc-biblioref">ONSV (2021</a>)</span>, onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 17%">
-<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
 <col style="width: 14%">
 <col style="width: 14%">
 <col style="width: 14%">
@@ -297,7 +297,7 @@ window.Quarto = {
 <th style="text-align: center;">media_mortes</th>
 <th style="text-align: center;">prioridade</th>
 <th style="text-align: center;">meta</th>
-<th style="text-align: center;">variacao</th>
+<th style="text-align: center;">var</th>
 <th style="text-align: center;">var_perc</th>
 </tr>
 </thead>
@@ -349,6 +349,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>A variável <strong>var</strong> e <strong>var_perc</strong> representam a variação da meta em relação à média de mortes e o percentual de variação, respectivamente.</p>
+<p>Variação:</p>
+<p><span class="math display">\[
+\text{var} = {\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}
+\]</span></p>
+<p>Percentual de Variação:</p>
+<p><span class="math display">\[
+\mathrm{var\_perc} = \frac{\text{Meta do número de mortes} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
+\]</span></p>
 <p>A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas para cada município:</p>
 <p><span class="math display">\[
 \text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
