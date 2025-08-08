@@ -40,7 +40,7 @@ O Observatório Nacional de Segurança Viária é uma instituição social sem f
 
 <p>
 
-ONSV; UFPR (2025). Análise do Cumprimento das Metas de Redução de Mortes no Trânsito dos Municípios Brasileiros até 2023. Observatório Nacional de Segurança Viária e Universidade Federal do Paraná. Disponível em: https://onsv.github.io/relatorio-cumprimento-metas/
+ONSV; UFPR (2025). Análise do Cumprimento das Metas de Redução de Mortes no Trânsito dos Municípios Brasileiros até 2023. Observatório Nacional de Segurança Viária e Universidade Federal do Paraná. Disponível em: https://onsv.github.io/cumprimento-metas/
 
 <br>
 

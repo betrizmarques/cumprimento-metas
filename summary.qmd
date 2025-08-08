@@ -6,7 +6,7 @@ Quanto ao número de mortes por UF e do Brasil como um todo, todos os município
 
 ## Pré-processamento dos dados
 
-A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência [@onsv2024base]. Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:
+A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência (@onsv2024base). Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:
 
 | uf  | nome_do_municipio | numero_de_mortes_2023 |
 |:---:|:-----------------:|:---------------------:|
@@ -16,12 +16,12 @@ A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths
 | AC  |  Cruzeiro do Sul  |          13           |
 | AC  |  Epitaciolândia   |           2           |
 
-Depois, as bases de frota [@senatran2024frota] e número habitantes da população de cada município [@ibge2023populacao] foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.
+Depois, as bases de frota (@senatran2024frota) e número habitantes da população de cada município (@ibge2023populacao) foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.
 
-Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original [@ufpr2021plano], onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
+Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original (@ufpr2021plano), onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
 
 | uf | municipio | media_mortes | prioridade | meta | var | var_perc |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | Acre | Acrelândia | 2.6666667 | 23 | 2.32159208 | -0.34507458 | -0.12940297 |
 | Acre | Brasiléia | 4.3333333 | 11 | 2.09034854 | -2.24298479 | -0.51761188 |
 | Acre | Bujari | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
