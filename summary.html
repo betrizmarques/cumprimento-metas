@@ -241,7 +241,7 @@ window.Quarto = {
 <p>Quanto ao número de mortes por UF e do Brasil como um todo, todos os municípios foram considerados (incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS), para criar um panorama geral de cada Unidade Federação e visualizar a situação do país em relação à segurança viária.</p>
 <section id="pré-processamento-dos-dados" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="pré-processamento-dos-dados"><span class="header-section-number">2.1</span> Pré-processamento dos dados</h2>
-<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência (<span class="citation" data-cites="onsv2024base">ONSV <a href="#ref-onsv2024base" role="doc-biblioref">2024</a>)</span>). Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:</p>
+<p>A principal base utilizada para atualização dos dados foi a <code>roadtrafficdeaths</code>, em que <strong>cada linha representa uma morte por sinistro de trânsito</strong>, contendo informações detalhadas como data, localização e características da ocorrência (<span class="citation" data-cites="onsv2024base">ONSV (<a href="#ref-onsv2024base" role="doc-biblioref">2024</a>)</span>). Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um <strong>processo de agregação por município</strong>, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -278,8 +278,8 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>Depois, as bases de frota (<span class="citation" data-cites="senatran2024frota">BRASIL <a href="#ref-senatran2024frota" role="doc-biblioref">2024</a>)</span>) e número habitantes da população de cada município (<span class="citation" data-cites="ibge2023populacao">IBGE <a href="#ref-ibge2023populacao" role="doc-biblioref">2023</a>)</span>) foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
-<p>Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original (<span class="citation" data-cites="ufpr2021plano">ONSV <a href="#ref-ufpr2021plano" role="doc-biblioref">2021</a>)</span>), onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:</p>
+<p>Depois, as bases de frota (<span class="citation" data-cites="senatran2024frota">BRASIL (<a href="#ref-senatran2024frota" role="doc-biblioref">2024</a>)</span>) e número habitantes da população de cada município (<span class="citation" data-cites="ibge2023populacao">IBGE (<a href="#ref-ibge2023populacao" role="doc-biblioref">2023</a>)</span>) foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.</p>
+<p>Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original (<span class="citation" data-cites="ufpr2021plano">ONSV (<a href="#ref-ufpr2021plano" role="doc-biblioref">2021</a>)</span>), onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
@@ -417,18 +417,18 @@ window.Quarto = {
 <p>O mapa interativo está presente apenas na aba do Brasil. Ele exibe o mapa do Brasil dividido por estado, nos quais os tons mais escuros de vermelho representam uma situação alarmante enquanto os tons mais claros retratam uma uma situação de menor gravidade. Ao clicar na UF com o mouse, surgem as informações sobre aquela determinada região. Na parte esquerda inferior do mapa, é possível alterar a variável que se deseja visualizar no mapa, elas incluem: número de morres em 2023, média do número de mortes de 2018 à 2020, variação, o quanto da meta já foi atingida e qual era a meta estabelecida.</p>
 
 
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-senatran2024frota" class="csl-entry" role="listitem">
-BRASIL. Frota de veículos 2024., 2024. Brasília, DF: Ministério dos Transportes. Secretaria Nacional de Trânsito (Senatran). Disponível em: &lt;<a href="https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024">https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024</a>&gt;.
+BRASIL. 2024. <span>“Frota de Veículos 2024.”</span> Brasília, DF: Ministério dos Transportes. Secretaria Nacional de Trânsito (Senatran). <a href="https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024">https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024</a>.
 </div>
 <div id="ref-ibge2023populacao" class="csl-entry" role="listitem">
-IBGE. Relação da população dos municípios para publicação no TCU em 2023., 2023. Rio de Janeiro: IBGE. Disponível em: &lt;<a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html">https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html</a>&gt;.
+IBGE. 2023. <span>“Relação Da População Dos Municípios Para Publicação No TCU Em 2023.”</span> Rio de Janeiro: IBGE. <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html">https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html</a>.
 </div>
 <div id="ref-onsv2024base" class="csl-entry" role="listitem">
-ONSV. Base de dados roadtrafficdeaths., 2024. Observatório Nacional de Segurança Viária. Disponível em: &lt;<a href="https://github.com/pabsantos/roadtrafficdeaths">https://github.com/pabsantos/roadtrafficdeaths</a>&gt;.
+ONSV. 2024. <span>“Base de Dados Roadtrafficdeaths.”</span> Observatório Nacional de Segurança Viária. <a href="https://github.com/pabsantos/roadtrafficdeaths">https://github.com/pabsantos/roadtrafficdeaths</a>.
 </div>
 <div id="ref-ufpr2021plano" class="csl-entry" role="listitem">
-ONSV, UFPR; <strong><a href="https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios">O plano nacional de redução mortes e lesões no trânsito: O papel dos municípios</a></strong>. Curitiba: Universidade Federal do Paraná; Observatório Nacional de Segurança Viária, 2021.
+ONSV, UFPR; 2021. <em>O Plano Nacional de Redução Mortes e Lesões No Trânsito: O Papel Dos Municípios</em>. Curitiba: Universidade Federal do Paraná; Observatório Nacional de Segurança Viária. <a href="https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios">https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios</a>.
 </div>
 </div>
 </section>
