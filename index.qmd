@@ -13,7 +13,9 @@ p {
 
 <p>
 
-O Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), criado pela Lei Federal nº 13.614/2018, tem como objetivo estabelecer metas de redução da mortalidade no trânsito para os estados e para o país entre 2019 e 2028. Em 2021, o plano foi revisado, prorrogando o prazo das metas até 2030 e reformulando seus pilares de atuação. As metas de redução foram definidas para os municípios brasileiros através das técnicas de *clusterização* e *benchmarking*. O objetivo, agora, é observar o desempenho de cada município até 2023, atráves da visualização de dados. Para isso, foi criado um Dashboard que contém todas as informações necessárias para esse monitoramento. O DashBoard para visualização do desempenho dos municípios está disponível neste link: [Dashboard](https://beatrizmarques.shinyapps.io/cumprimento_metas/).
+O Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS), criado pela Lei Federal nº 13.614/2018, tem como objetivo estabelecer metas de redução da mortalidade no trânsito para os estados e para o país entre 2019 e 2028. Em 2021, o plano foi revisado, prorrogando o prazo das metas até 2030 e reformulando seus pilares de atuação. As metas de redução foram definidas para os municípios brasileiros através das técnicas de *clusterização* e *benchmarking*. O objetivo, agora, é observar o desempenho de cada município até 2023, atráves da visualização de dados. Para isso, foi criado um Dashboard que contém todas as informações necessárias para esse monitoramento. O DashBoard para visualização do desempenho dos municípios está disponível neste link: 
+
+[Dashboard: Cumprimento das metas](https://onsv1.shinyapps.io/cumprimento-metas/){.btn .btn-secondary .btn-sm}
 
 # Highlights {.unnumbered}
 

@@ -18,15 +18,11 @@ book:
     - conclusion.qmd
     - references.qmd
 
-bibliography: references.bib
-
 format:
   html:
     theme: cosmo
-    reference-location: section
   pdf:
     documentclass: book
-    reference-location: section  
 website:
   repo-url: https://github.com/betrizmarques/relatorio-cumprimento-metas.git
   repo-actions: [edit, issue]

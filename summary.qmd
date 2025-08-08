@@ -2,14 +2,13 @@
 title: "Metodologia"
 ---
 
-
 A unidade de análise adotada foram os municípios brasileiros que possuíam registros de mortes no trânsito entre 2018 e 2020. Do total de municípios existentes no Brasil em 2021 (5.570), 5.044 apresentaram registros de óbitos por sinistros viários nesse período. No entanto, nas análises de comparação dos dois períodos, foram excluídos os municípios considerados outliers, restando um total de 4.473 municípios com dados considerados confiáveis. As metas de redução foram estabelecidas exclusivamente para esses municípios não outliers e por isso, neste estudo foi realizada a comparação apenas destes municípios.
 
 Quanto ao número de mortes por UF e do Brasil como um todo, todos os municípios foram considerados (incluindo os que não tinham metas estabelecidas estabelecidas pelo PNATRANS), para criar um panorama geral de cada Unidade Federação e visualizar a situação do país em relação à segurança viária.
 
 ## Pré-processamento dos dados
 
-A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência (@onsv2024base). Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:
+A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths`, em que **cada linha representa uma morte por sinistro de trânsito**, contendo informações detalhadas como data, localização e características da ocorrência [(ONSV, 2024)](https://github.com/pabsantos/roadtrafficdeaths). Originalmente, a base continha 23 variáveis e 1.005.743 observações, ou seja, mortes no trânsito desde 1997 até 2023. A partir dessa base, foi realizado um **processo de agregação por município**, contabilizando o total de óbitos registrados no ano de 2023. Esse processo resultou em uma base com 4.109 linhas e 3 colunas, onde cada observação é um município e as variáveis incluem estado, município e o número de mortes registradas neste município. As 5 primeiras linhas da base seguem como exemplo:
 
 | uf  | nome_do_municipio | numero_de_mortes_2023 |
 |:---:|:-----------------:|:---------------------:|
@@ -19,12 +18,12 @@ A principal base utilizada para atualização dos dados foi a `roadtrafficdeaths
 | AC  |  Cruzeiro do Sul  |          13           |
 | AC  |  Epitaciolândia   |           2           |
 
-Depois, as bases de frota (@senatran2024frota) e número habitantes da população de cada município (@ibge2023populacao) foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.
+Depois, as bases de frota [(SENATRAN, 2023)](https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/frota-de-veiculos-2024)e número habitantes da população de cada município [(IBGE, 2023)](https://www.ibge.gov.br/estatisticas/sociais/populacao/37734-relacao-da-populacao-dos-municipios-para-publicacao-no-tcu.html) foram agregadas à essa base, com o objetivo de facilitar a análise da tabela interativa do dashboard.
 
-Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original (@ufpr2021plano), onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
+Em seguida, as bases pré-processadas acima foram integrados à base de metas do estudo original [(ONSV; UFPR 2021)](https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios), onde cada município é uma observação. Essa base contempla 17 variáveis, no entanto, para esta análise foram utilizadas apenas 7 delas. A seleção de variáveis ficou da seguinte forma:
 
 | uf | municipio | media_mortes | prioridade | meta | var | var_perc |
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Acre | Acrelândia | 2.6666667 | 23 | 2.32159208 | -0.34507458 | -0.12940297 |
 | Acre | Brasiléia | 4.3333333 | 11 | 2.09034854 | -2.24298479 | -0.51761188 |
 | Acre | Bujari | 0.6666667 | 24 | 0.60196518 | -0.06470148 | -0.09705223 |
@@ -61,7 +60,7 @@ Estes dois reultados foram duas novas variáveis criadas e agregadas à base fin
 
 Depois do pré-processamento dos dados, os resultados foram sistematizados em um dashboard desenvolvido com os pacotes `Shiny` e `Bs4Dash`, que pertencem à linguagem R. Essas ferramentas permitem a visualização interativa dos resultados por município e por estado, incluindo gráficos comparativos e tabelas, com o intuito de facilitar a visualização do cumprimento das metas. Para visualizar o dashboard, deve-se clicar no link a seguir:
 
-[Dashboard: Cumprimento das metas](https://beatrizmarques.shinyapps.io/cumprimento_metas/){.btn .btn-secondary .btn-sm}
+[Dashboard: Cumprimento das metas](https://onsv1.shinyapps.io/cumprimento-metas/){.btn .btn-secondary .btn-sm}
 
 A interface é organizada por **unidades da federação**, e cada aba apresenta:
 
