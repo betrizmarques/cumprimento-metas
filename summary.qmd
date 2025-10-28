@@ -47,11 +47,11 @@ $$
 A comparação da redução de mortes no trânsito em 2023 em relação às metas de redução foram calculadas para cada município:
 
 $$
-\text{Redução} = \frac{\text{Número de mortes (2023)} - \text{Média do número de mortes (2018–2020)}}{\text{Média do número de mortes (2018–2020)}}
+\text{Variação} = \frac{\text{Número de mortes (2023)} - \text{Média do número de mortes por ano (2018–2020)}}{\text{Média do número de mortes por ano (2018–2020)}}
 $$
 
 $$
-\text{Percentual da meta atingida} = \left( \frac{\text{Redução}}{\text{Meta estabelecida}} \right) \times 100
+\text{Percentual da meta atingida} = \left( \frac{\text{Variação}}{\text{Meta estabelecida}} \right) \times 100
 $$
 
 Estes dois reultados foram duas novas variáveis criadas e agregadas à base final, o pré-processamento dos dados foi inteiramente realizado utilizando a linguagem R.
