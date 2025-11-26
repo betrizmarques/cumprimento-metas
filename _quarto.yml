@@ -9,7 +9,7 @@ book:
     orcid: 0009-0005-0639-8325
   - name: Dr. Jorge Tiago Bastos
     orcid: 0000-0001-6447-1504
-  date: last-modified
+  date: 2025/07/27
   chapters:
     - index.qmd
     - intro.qmd
@@ -20,6 +20,7 @@ book:
 
 format:
   html:
+    css: styles.css
     theme: cosmo
   pdf:
     documentclass: book

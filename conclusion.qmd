@@ -4,5 +4,5 @@ Os resultados apresentados evidenciam a complexidade e os desafios enfrentados p
 
 A análise regional mostra disparidades significativas entre estados e municípios, sugerindo que fatores locais, como infraestrutura, fiscalização, políticas públicas e educação para o trânsito, influenciam diretamente os resultados obtidos, o que indica que alguns municípios caminham em direção à meta e outros não. Essas variações reforçam a importância de ações direcionadas, adaptadas à realidade de cada localidade.
 
-O dashboard se consolida como uma ferramenta valiosa de monitoramento e transparência, permitindo que gestores públicos, pesquisadores e a sociedade acompanhem de forma clara e objetiva o progresso das metas pactuadas. Mais do que um diagnóstico, ele oferece subsídios para a tomada de decisão e o aprimoramento das estratégias de prevenção e redução de mortes no trânsito.
+O *dashboard* se consolida como uma ferramenta valiosa de monitoramento e transparência, permitindo que gestores públicos, pesquisadores e a sociedade acompanhem de forma clara e objetiva o progresso das metas pactuadas. Mais do que um diagnóstico, ele oferece subsídios para a tomada de decisão e o aprimoramento das estratégias de prevenção e redução de mortes no trânsito.
 

@@ -8,6 +8,42 @@ editor:
 
 ## Brasil
 
+Após a criação do conjunto de dados e dos cálculos, criou-se um panorama geral do Brasil em relação à proporção de municípios que atingiram a meta e dos que não atingiram, e desses que não atingiram, se ao menos reduziram o número de mortes no trânsito ou se esse número teve algum aumento. De acordo com a Figura 1, 35,11% dos municípios brasileiros atingiram a meta de redução de mortes no trânsito estabelecida em 2021. Do restante que não atingiu, 44,73% tiveram um aumento no número de mortes no trânsito e 20,16% tiveram redução. 
+
+![Figura 1 – Desempenho dos municípios brasileiros em relação à meta estabelecida ](img/desempenho_municipios.png)
+O Brasil, no total, tinha uma meta de redução de -37,96% de mortes no trânsito estabelecida em 2021. No entanto, 34.881 mortes ocorreram no trânsito no país em 2023, resultando em um aumento de 7,53% em relação aos anos 2018, 2019 e 2020, que tinham uma média de 32.437,33 mortes por ano.  
+
+As estatísticas mostram que o Brasil (como um todo) está caminhando em direção contrária à meta estabelecida em 2021, o que indica um agravamento na situação de segurança viária no país e a necessidade de novas estratégias para atingir a meta estabelecida pelo PNATRANS. 
+
+## Unidades Federativas
+
+A Figura 2 apresenta o gráfico das proporções de municípios que atingiram a meta estabelecida dentro de cada estado. O Distrito Federal, o Acre e o Rio Grande do Norte apresentaram as maiores proporções (acima de 45%), enquanto Mato Grosso do Sul, Mato Grosso e Roraima apresentaram as menores (abaixo de 20%). 
+
+![Figura 2 – Proporção de municípios que atingiram a meta dentro de cada estado. ](img/estados_proporcao.png)
+Das 27 unidades de federação, 21 apresentaram aumento no número total de mortes no trânsito em 2023 e alguns estados tiveram um aumento de até 33,14%. O estado do Rio Grande do Norte obteve o melhor desempenho, com uma redução de -14,35%, em seguida, o Acre, com uma redução de -13,62%. Em contrapartida, Roraima (33,14%) e Bahia (27,07%) apresentaram o maior aumento no número de mortes no trânsito, sugerindo um pior desempenho. O desempenho de cada unidade da federação está demonstrado na Figura 3.
+
+![ Figura 3 – Variação do número de mortes no trânsito por estado.](img/estados_rgn.png)
+
+## Capitais
+
+Dentre as capitais, a que teve o melhor desempenho foi São Paulo, com uma redução de 52,1% no número de mortes no trânsito em 2023. A meta de redução estabelecida pelo PNATRANS para São Paulo (-6,5%) foi atingida, assim como a de Salvador (-3,24%) e a de Brasília (-6.47%). O restante ainda não atingiu a meta, apesar de haver reduções no número de mortes nesses municípios em relação aos anos de 2018 a 2020, como apresenta a Figura 4.
+
+![Figura 4 – Variação do número de mortes no trânsito por capital.](img/capitais_saopaulo.png)
+
+## Municípios Prioritários
+
+Dentre os 122 municípios com maior urgência, ou seja, municípios com a situação de segurança viária agravada e potencial de mobilização elevado, 39,34% já atingiram a meta estabelecida e dos que não atingiram, 28,69% tiveram uma redução no número de mortes no trânsito e 31,97% tiveram um aumento, como representado na Figura 5. Esse resultado sugere uma melhora na situação da segurança viária nesses municípios e evidencia que os esforços dedicados à essa área estão colaborando para resultados positivos.
+
+![Figura 5 – Desempenho dos municípios prioritários em relação à meta estabelecida.](img/mais_urgente_barplot.png)
+
+A lista dos municípios prioritários que atingiram a meta de redução pode ser conferida na Tabela 1. 
+
+![Tabela 1 - Informações sobre os municípios prioritários que atingiram a meta.](img/minha_tabela1.png)
+
+# Resultados Específicos
+
+## Brasil
+
 -   Dos 5.570 municípios do Brasil, 5.044 municípios não outliers tiveram uma meta estabelecida pelo PNATRANS em 2021.
 
 -   O Brasil registrou, no total, 34.881 mortes no trânsito em 2023, apontando um aumento de 7,53% em relação aos anos 2018-2020, que tiveram uma média de 32.437,33 mortes no trânsito.
